@@ -12,7 +12,7 @@ The `commands/` directory contains **custom OpenCode CLI extensions**. These com
 |---------|------|---------|--------------|
 | **checkpoint** | `checkpoint.md` | Save verification state and progress checkpoint | None |
 | **implement-plan** | `implement-plan.md` | Implement a saved plan from `.opencode/plans/` | `opencoder` |
-| **orchestrate** | `orchestrate.md` | Orchestrate multiple agents for complex tasks | `openjarvis` |
+| **orchestrate** | `orchestrate.md` | Orchestrate multiple agents for complex tasks | `opennexus` |
 
 ### Code Quality
 

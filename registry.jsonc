@@ -4,11 +4,11 @@
   "components": {
     "agents": [
       {
-        "id": "openjarvis",
-        "name": "OpenJarvis",
+        "id": "opennexus",
+        "name": "OpenNexus",
         "description": "Orchestrator that delegates to specialists for optimal quality/speed/cost",
         "type": "opencode-agent-markdown",
-        "path": "core/agents/primary/openjarvis.md",
+        "path": "core/agents/primary/OpenNexus.md",
         "dependencies": [
           "context-manager",
           "deep-explorer",
@@ -40,7 +40,7 @@
         "name": "OpenPlanner",
         "description": "Planning agent for analysis, design, and step-by-step plans",
         "type": "opencode-agent-markdown",
-        "path": "core/agents/primary/openplanner.md",
+        "path": "core/agents/primary/OpenPlanner.md",
         "dependencies": [
           "deep-explorer",
           "reviewer",
@@ -64,7 +64,7 @@
         "name": "Opencoder",
         "description": "Coding agent for implementation and refactors",
         "type": "opencode-agent-markdown",
-        "path": "core/agents/primary/opencoder.md",
+        "path": "core/agents/primary/OpenCoder.md",
         "dependencies": [
           "deep-explorer",
           "reviewer",
@@ -92,7 +92,7 @@
         "name": "OpenBrainstorm",
         "description": "Brainstorming creative agent for generating ideas, asking clarifying questions, and exploring options",
         "type": "opencode-agent-markdown",
-        "path": "core/agents/primary/openbrainstorm.md",
+        "path": "core/agents/primary/OpenBrainstorm.md",
         "dependencies": [
           "deep-explorer",
           "reviewer",
@@ -280,7 +280,7 @@
         "type": "opencode-command-markdown",
         "path": "core/commands/orchestrate.md",
         "dependencies": [
-          "openjarvis"
+          "opennexus"
         ]
       },
       {

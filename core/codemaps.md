@@ -20,7 +20,7 @@ The `core/` directory is the **source of truth** for all OpenCode components. It
 core/
 ├── agents/
 │   ├── primary/           # User-facing conversation starters
-│   │   ├── openjarvis.md
+│   │   ├── opennexus.md
 │   │   ├── opencoder.md
 │   │   ├── openbrainstorm.md
 │   │   └── openplanner.md

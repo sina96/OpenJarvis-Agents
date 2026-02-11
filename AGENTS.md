@@ -85,12 +85,12 @@ Agent body (30-70 lines): mission, behavior guidelines, rules/limitations, deleg
 ### Agent Categories
 
 **Primary Agents** (user-facing, start conversations):
-- `openjarvis`: Orchestrator that delegates to specialists for best quality/speed/cost
+- `opennexus`: Orchestrator that delegates to specialists for best quality/speed/cost
 - `opencoder`: Implementation, refactors, bug fixes
 - `openbrainstorm`: Ideation, clarifying questions, exploring options
 - `openplanner`: Planning, analysis, step-by-step design
 
-Primary-agent delegation policy: `openjarvis` orchestrates via subagents by default. Other primary agents do not delegate unless explicitly asked.
+Primary-agent delegation policy: `opennexus` orchestrates via subagents by default. Other primary agents do not delegate unless explicitly asked.
 
 **Subagents** (delegated by primary agents):
 - `deep-explorer`: Read-only codebase discovery

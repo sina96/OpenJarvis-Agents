@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/openjarvis-banner.png" alt="OpenJarvis banner" />
+  <img src="assets/opennexus-agents-banner.png" alt="OpenNexus agents banner" />
 </p>
 
-<h3 align="center">OpenJarvis agents</h2>
+<h3 align="center">OpenNexus agents</h2>
 
 
 
@@ -15,7 +15,7 @@
 </a>
 <p>
 
-# OpenJarvis Agents Repository
+# OpenNexus Agents Repository
 
 A comprehensive collection of AI agents, subagents, commands, and skills for the OpenCode AI coding assistant. This repository provides a modular, extensible framework for intelligent code assistance, from implementation and refactoring to planning and orchestration.
 
@@ -34,7 +34,7 @@ Before installing, ensure you have the following dependencies:
 For quick setup and CI/automation, use this one-liner to install all components non-interactively:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/sina96/OpenJarvis-Agents/main/install.sh | bash -s -- --non-interactive-all
+curl -fsSL https://raw.githubusercontent.com/sina96/OpenNexus-Agents/main/install.sh | bash -s -- --non-interactive-all
 ```
 
 > **Note:** This installs agents, subagents, commands, skills, and all other components without prompts. Suitable for quick setup and CI/automation. By default, non-interactive installation installs to the local project directory (`current-directory/.opencode`).
@@ -97,7 +97,7 @@ Primary agents are user-facing and designed to start conversations. They handle 
 
 | Name | Temperature | Description |
 |------|-------------|-------------|
-| **OpenJarvis** | 0.2 |  Orchestrator that delegates to specialists for optimal quality/speed/cost |
+| **OpenNexus** | 0.2 |  Orchestrator that delegates to specialists for optimal quality/speed/cost |
 | **OpenCoder** | 0.2 | Coding agent for implementation and refactors |
 | **OpenBrainstorm** | 0.8 | Brainstorming creative agent for generating ideas, asking clarifying questions, and exploring options |
 | **OpenPlanner** | 0.1 | Planning agent for analysis, design, and step-by-step plans |
@@ -302,7 +302,7 @@ model: anthropic/claude-sonnet-4-5
 - Complex refactoring (`senior-coder`)
 - Security and correctness review (`reviewer`)
 - Architecture decisions (`openplanner`)
-- Multi-agent orchestration (`openjarvis`)
+- Multi-agent orchestration (`opennexus`)
 
 **Temperature settings also matter:**
 - **0.0-0.2**: Precision tasks (testing, reviewing, implementing specs)
