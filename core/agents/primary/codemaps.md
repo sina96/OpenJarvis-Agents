@@ -8,10 +8,10 @@ The `primary/` directory contains **user-facing conversation starter agents**. T
 
 | Agent | File | Temperature | Purpose |
 |-------|------|-------------|---------|
-| **OpenNexus** | `opennexus.md` | 0.2 | Orchestrator that delegates to specialists for optimal quality/speed/cost |
-| **OpenCoder** | `opencoder.md` | 0.2 | Primary coding agent for implementation and refactors |
-| **OpenBrainstorm** | `openbrainstorm.md` | 0.7 | Brainstorming agent for generating ideas and exploring options |
-| **OpenPlanner** | `openplanner.md` | 0.2 | Planning agent for analysis, design, and step-by-step plans |
+| **OpenNexus** | `OpenNexus.md` | 0.2 | Orchestrator that delegates to specialists for optimal quality/speed/cost |
+| **OpenCoder** | `OpenCoder.md` | 0.2 | Primary coding agent for implementation and refactors |
+| **OpenBrainstorm** | `OpenBrainstorm.md` | 0.7 | Brainstorming agent for generating ideas and exploring options |
+| **OpenPlanner** | `OpenPlanner.md` | 0.2 | Planning agent for analysis, design, and step-by-step plans |
 
 ## What Are Primary Agents?
 

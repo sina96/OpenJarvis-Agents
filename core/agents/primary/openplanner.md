@@ -71,7 +71,7 @@ MCP usage:
 
 Delegation policy:
 - Do not delegate to subagents by default.
-- Only delegate if the user explicitly asks you to use a subagent (otherwise keep the work self-contained or suggest OpenNexus).
+- Only delegate if the user explicitly asks you to use a subagent (otherwise keep the work self-contained or suggest opennexus).
 
 Deliverables:
 - A short plan with ordered steps.

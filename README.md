@@ -154,10 +154,10 @@ Skills are reusable instruction modules that provide domain-specific workflows a
 ## Repository Structure
 
 ```
-opencoders-basic/
+OpenCoders-basic/
 ├── core/
 │   ├── agents/
-│   │   ├── primary/      # Primary agents (opencoder, openbrainstorm, etc.)
+│   │   ├── primary/      # Primary agents (OpenCoder, OpenBrainstorm, etc.)
 │   │   └── subagents/    # Subagents (deep-explorer, reviewer, tester, etc.)
 │   ├── commands/         # Custom commands (installed into .opencode/commands)
 │   └── skills/           # Reusable skill modules (installed into .opencode/skills)
@@ -173,7 +173,7 @@ After installation, invoke agents using the OpenCode CLI:
 
 ```bash
 # Start a conversation with a primary agent
-opencode chat @opencoder "Implement user authentication"
+opencode chat @OpenCoder "Implement user authentication"
 
 # Use a command
 opencode run checkpoint
@@ -282,7 +282,7 @@ model: openai/gpt-4o-mini
 model: anthropic/claude-sonnet-4-5
 
 # Fast brainstorming - use balanced model
-# core/agents/primary/openbrainstorm.md
+# core/agents/primary/OpenBrainstorm.md
 model: google/gemini-2.5-flash
 
 # Critical security review - use most capable model
@@ -301,8 +301,8 @@ model: anthropic/claude-sonnet-4-5
 **Use premium models for:**
 - Complex refactoring (`senior-coder`)
 - Security and correctness review (`reviewer`)
-- Architecture decisions (`openplanner`)
-- Multi-agent orchestration (`opennexus`)
+- Architecture decisions (`OpenPlanner`)
+- Multi-agent orchestration (`OpenNexus`)
 
 **Temperature settings also matter:**
 - **0.0-0.2**: Precision tasks (testing, reviewing, implementing specs)
