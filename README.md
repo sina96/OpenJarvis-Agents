@@ -8,7 +8,7 @@
 
 
 <p align="center">Orchestration, coding, planning and brainstorming agents with a pack of subagents, skills and commands</p>
-<h4 align="center">version 0.1.0</h4>
+<p align="center">version 0.1.0</p>
 
 <p align="center">
 <a href="https://opensource.org/licenses/MIT">
