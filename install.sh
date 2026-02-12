@@ -1669,14 +1669,29 @@ ensure_gitignore_entry() {
 }
 
 write_project_config() {
-  # Creates opencode.jsonc in project root.
-  local cfg="${TARGET_DIR}/opencode.jsonc"
-  if [ -f "$cfg" ]; then
-    print_warn "opencode.jsonc already exists; leaving it unchanged"
+  # Creates opencode config in project root.
+  # Prefers .jsonc (with comments) if system supports it, otherwise falls back to .json (no comments).
+  
+  # Check if either config already exists
+  if [ -f "${TARGET_DIR}/opencode.jsonc" ] || [ -f "${TARGET_DIR}/opencode.json" ]; then
+    if [ -f "${TARGET_DIR}/opencode.jsonc" ]; then
+      print_warn "opencode.jsonc already exists; leaving it unchanged"
+    else
+      print_warn "opencode.json already exists; leaving it unchanged"
+    fi
     return 0
   fi
 
-  cat > "$cfg" <<'EOF'
+  # Detect JSONC support: check if we have python3 or python (used by jsonc_to_json)
+  local supports_jsonc=false
+  if command -v python3 >/dev/null 2>&1 || command -v python >/dev/null 2>&1; then
+    supports_jsonc=true
+  fi
+
+  if [ "$supports_jsonc" = true ]; then
+    # Write JSONC with comments
+    local cfg="${TARGET_DIR}/opencode.jsonc"
+    cat > "$cfg" <<'EOF'
 {
   "$schema": "https://opencode.ai/config.json",
   // Project-scoped OpenCode config.
@@ -1693,7 +1708,26 @@ write_project_config() {
   }
 }
 EOF
-  print_info "Wrote project config: ${cfg}"
+    print_info "Wrote project config: ${cfg}"
+  else
+    # Write JSON without comments
+    local cfg="${TARGET_DIR}/opencode.json"
+    cat > "$cfg" <<'EOF'
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "opennexus",
+  "agent": {
+    "plan": {
+      "hidden": true
+    },
+    "build": {
+      "hidden": true
+    }
+  }
+}
+EOF
+    print_info "Wrote project config: ${cfg} (JSON format; python not available for JSONC)"
+  fi
 }
 
 interactive_provider_postinstall() {
